@@ -23,10 +23,24 @@ const projects = [
     image: "/ml-project.jpg.png",
     tags: ["Random Forest", "Scikit-Learn", "EDA", "Data Cleaning", "Python"],
     premium: true,
-    github: "https://github.com/Eng-mohamed33/Audi-Price-Prediction",
+    github: "https://github.com/Eng-mohamed33/Audi-Price-Prediction-",
     live: "#",
     buttons: [
-      { label: "View Source Code", action: "code" }
+      { label: "View Code", action: "code" }
+    ]
+  },
+  {
+    title: "Team-Based AI Skills Recognition",
+    label: "Team Collaboration",
+    role: "Deep Learning Engineer",
+    description: "A collaborative deep learning project where I took full ownership of developing the InceptionV3 architecture. My work is contained in the second notebook of the repository (PROJECT_AI_SKILLS_EDIT_1_ (1).ipynb), where I implemented multi-scale feature extraction to optimize recognition accuracy.",
+    image: "/placeholder.svg",
+    tags: ["InceptionV3", "Deep Learning", "Multi-scale Features", "Team Collaboration"],
+    premium: true,
+    github: "https://github.com/Eng-mohamed33/-AI-Skills-Recognition/tree/main",
+    live: "#",
+    buttons: [
+      { label: "View Code", action: "code" }
     ]
   },
   {
@@ -105,29 +119,6 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-contain bg-secondary transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  {project.github !== "#" && (
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-secondary rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github size={20} />
-                    </motion.a>
-                  )}
-                  <motion.button
-                    onClick={() => setLightboxImage(project.image)}
-                    className="p-3 bg-secondary rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="View Project"
-                  >
-                    <ExternalLink size={20} />
-                  </motion.button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold mb-2">
